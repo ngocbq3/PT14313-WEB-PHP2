@@ -39,7 +39,7 @@ class CategoryController extends Controller {
 
     //Cập nhật danh mục
     public function update($id) {
-        $category = Category::find_id($id);
+        //Kiểm tra nếu người dùng nhấp vào lưu thì tiến hành cập nhật
         if (isset($_POST['savecate'])) {
             extract($_REQUEST);
             $updated_at = date('Y-m-d H:i:s');
@@ -49,11 +49,12 @@ class CategoryController extends Controller {
                 "desc"=>$desc,
                 "updated_at"=>$updated_at
             ], $id);
-
+            $category = Category::find_id($id);
             $thongbao = "Cập nhật dữ liệu thành công";
             $this->render('admin/updateCategory', ['thongbao'=>$thongbao, 'cate'=>$category]);
         } else {
             //Hiển thị dữ liệu cũ 
+            $category = Category::find_id($id);
             $this->render('admin/updateCategory', ['cate'=>$category]);
         }
     }
