@@ -1,9 +1,10 @@
 <?php
 //Hàm tự động include class trong models và controllers
-function autoloader($class) {
+function autoloader($class)
+{
     //Kiểm tra $class xem có phải là controller không
     //Nếu có thì tiến hành include vào project
-    if ( preg_match("/Controller$/", $class) ) {
+    if (preg_match("/Controller$/", $class)) {
         if (file_exists('./app/controllers/' . $class . '.php')) {
             require_once './app/controllers/' . $class . '.php';
         }

@@ -50,4 +50,21 @@ class Cart {
         }
         return $count;
     }
+    //Xóa giỏ hàng
+    public function clearCart() {
+        if (isset($_SESSION['cart'])) {
+            unset($_SESSION['cart']);
+        }
+    }
+    //Tính tổng tiền của giỏ hàng
+    public function totalPrice() {
+        $total = 0;
+        if (isset($_SESSION['cart'])) {
+            $cart_arr = $_SESSION['cart'];
+            for( $i=0; $i < count($cart_arr); $i++) {
+                $total += $cart_arr[$i]['price'] * $cart_arr[$i]['quantity'];
+            }
+        }
+        return $total;
+    }
 }

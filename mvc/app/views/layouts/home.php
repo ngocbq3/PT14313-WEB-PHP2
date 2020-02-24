@@ -24,6 +24,12 @@ $total = $data['totalcart'];
 $cate = $data['cate'];
 ?>
 <h2>Số lượng sản phẩm: <?=$data['totalcart']?></h2>
+<div>
+    <?php if(isset($_SESSION['cart'])) : ?>
+        <a href="<?=BASE_URL?>cart/clear">Xóa giỏ hàng</a>
+        <a href="<?=BASE_URL?>cart/detail">Chi tiết</a>
+    <?php endif ?>
+</div>
 <nav>
     <ul>
        <?php foreach($cate as $c) : ?>
