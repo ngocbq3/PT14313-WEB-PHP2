@@ -59,7 +59,7 @@ class CartController extends Controller {
                 ];
                 $invoiceDetail->insert($arr_detail);
             }
-
+            $cart->clearCart();
             $thongbao = "Mua hàng thành công!";
             $this->render('layouts/payment_success', ['thongbao'=>$thongbao]);
 
