@@ -27,7 +27,7 @@ class SendMailController extends Controller {
             //Recipients
             $mail->setFrom('sinhvienftppoly.noreply@gmail.com', 'Ngocbq');
             $mail->addAddress('ngocbq@fpt.edu.vn', 'Ngocbq');     // Add a recipient
-            $mail->addAddress('dungltph05978@fpt.edu.vn');               // Name is optional
+            $mail->addAddress('phucnvph07307@fpt.edu.vn');               // Name is optional
             $mail->addReplyTo('ngocbq@fpt.edu.vn', 'Ngocbq');
             // $mail->addCC('cc@example.com');
             // $mail->addBCC('bcc@example.com');
