@@ -1,5 +1,6 @@
 <?php
     $cate = $data['cate'];
+    $products = $data['products'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,102 +21,9 @@
 			</ul>
 		</nav>
 		<article>
-			<div class="col">
-				<div class="product">
-					<a href="#">
-						<img src="<?=BASE_URL?>public/images/xKINH-TE.jpg">
-						<h3>Lorem ipsum dolor.</h3>
-						<div class="price">13.000.000</div>
-						<div class="desc">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</div>
-					</a>
-				</div>				
-			</div>
-			<div class="col">
-				<div class="product">
-					<a href="#">
-						<img src="<?=BASE_URL?>public/images/xKINH-TE.jpg">
-						<h3>Lorem ipsum dolor.</h3>
-						<div class="price">13.000.000</div>
-						<div class="desc">
-							<p>Lorem ipsum dolor sit amet, </p>
-						</div>
-					</a>
-				</div>				
-			</div>
-			<div class="col">
-				<div class="product">
-					<a href="#">
-						<img src="<?=BASE_URL?>public/images/xKINH-TE.jpg">
-						<h3>Lorem ipsum dolor.</h3>
-						<div class="price">13.000.000</div>
-						<div class="desc">
-							<p>Lorem ipsum dolor sit amet, consectetur </p>
-						</div>
-					</a>
-				</div>				
-			</div>
-			<div class="col">
-				<div class="product">
-					<a href="#">
-						<img src="<?=BASE_URL?>public/images/xKINH-TE.jpg">
-						<h3>Lorem ipsum dolor.</h3>
-						<div class="price">13.000.000</div>
-						<div class="desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>
-					</a>
-				</div>				
-			</div>
-			<div class="col">
-				<div class="product">
-					<a href="#">
-						<img src="<?=BASE_URL?>public/images/xKINH-TE.jpg">
-						<h3>Lorem ipsum dolor.</h3>
-						<div class="price">13.000.000</div>
-						<div class="desc">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</div>
-					</a>
-				</div>				
-			</div>
-			<div class="col">
-				<div class="product">
-					<a href="#">
-						<img src="<?=BASE_URL?>public/images/xKINH-TE.jpg">
-						<h3>Lorem ipsum dolor.</h3>
-						<div class="price">13.000.000</div>
-						<div class="desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>
-					</a>
-				</div>				
-			</div>
-			<div class="col">
-				<div class="product">
-					<a href="#">
-						<img src="<?=BASE_URL?>public/images/xKINH-TE.jpg">
-						<h3>Lorem ipsum dolor.</h3>
-						<div class="price">19.000.000</div>
-						<div class="desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>
-					</a>
-				</div>				
-			</div>
-			<div class="col">
-				<div class="product">
-					<a href="#">
-						<img src="<?=BASE_URL?>public/images/xKINH-TE.jpg">
-						<h3>Lorem ipsum dolor.</h3>
-						<div class="price">13.000.000</div>
-						<div class="desc">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</div>
-					</a>
-				</div>				
-			</div>
+            <?php
+            include_once "./app/views/layouts/" . $data['page'] . ".php";
+            ?>
 		</article>
 		<footer>
 			<p>&copy; (c) Academy PolyTechnic</p>

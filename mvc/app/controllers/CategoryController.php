@@ -6,8 +6,11 @@ class CategoryController extends Controller
     {
 
         $productInCate = Product::productInCategory($id);
-
-        $this->render('layouts/category', ['products' => $productInCate]);
+        $cate = Category::all();
+        $this->render('index', [
+            'page'=>'trangchu',
+            'products' => $productInCate,
+            'cate'=>$cate]);
     }
 
     public function add()
