@@ -1,6 +1,6 @@
 <?php
-    $cate = $data['cate'];
-    $products = $data['products'];
+    $cate = $data['cate'];//menu
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">

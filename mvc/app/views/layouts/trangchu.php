@@ -1,3 +1,6 @@
+<?php
+    $products = $data['products'];//product
+?>
 <?php foreach ($products as $p) : ?>
     <div class="col">
         <div class="product">
