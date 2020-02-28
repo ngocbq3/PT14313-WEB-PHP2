@@ -2,11 +2,10 @@
 
 class HomeController extends Controller {
     public function index() {
-        $cate = Category::all();
-        $cate = json_decode($cate);
+        $cate = Category::all();        
         $cart = new Cart;
         $count = $cart->totalProduct();
-        $this->render('layouts/home', ['cate'=>$cate, 'totalcart'=>$count]);
+        $this->render('index', ['cate'=>$cate, 'totalcart'=>$count]);
     }
     public function list() {
         echo "danh sách trang";

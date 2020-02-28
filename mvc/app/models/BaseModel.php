@@ -13,7 +13,7 @@ class BaseModel {
         $stmt = $model->conn->prepare($sqlBuilder);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
-        return json_encode($result);
+        return $result;
     }
 
     //Phương thức lấy dữ liệu theo id
