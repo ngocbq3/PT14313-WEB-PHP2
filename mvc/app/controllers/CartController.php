@@ -44,7 +44,8 @@ class CartController extends Controller {
             ];
             //Tạo đơn hàng
             $invoice->insert($arr);
-
+            //nội dung đơn hàng
+            $tbody = "";
             //Lấy id của đơn hàng
             $invoice_id = $invoice->lastId()->id;
             //Thêm dữ liệu của giỏ hàng vào chi tiết hóa đơn (invoices)
@@ -58,7 +59,13 @@ class CartController extends Controller {
                     'created_at' => $date
                 ];
                 $invoiceDetail->insert($arr_detail);
+
+                $tbody .= "Mã sản phẩm: " . $value['id'] . " Tên sản phẩm: " . $value['name'] . "Số lượng: " . $value['quantity'] . " Đơn giá: " . $value['price'] . "<br>";
             }
+            $tbody = "Mã hóa đơn: " . $invoice_id . "<br>" . $tbody;
+            $subject = "Đơn hàng của bạn " . $invoice_id;
+            $mail = new SendMail;
+            $mail->send_mail($subject, $tbody, $customer_email);
             $cart->clearCart();
             $thongbao = "Mua hàng thành công!";
             $this->render('layouts/payment_success', ['thongbao'=>$thongbao]);
